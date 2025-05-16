@@ -48,7 +48,6 @@ const integrations = [
 const IntegrationsSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [api, setApi] = useState<any>(null);
-  const [animateParticles, setAnimateParticles] = useState(false);
 
   // Auto-rotate effect
   useEffect(() => {
@@ -66,37 +65,8 @@ const IntegrationsSection = () => {
     }
   }, [activeSlide, api]);
 
-  // Start particle animation after component mounts
-  useEffect(() => {
-    setAnimateParticles(true);
-  }, []);
-
   return (
     <section className="section-padding bg-[#100822] py-24 relative overflow-hidden">
-      {/* Animated background particles */}
-      <div className="absolute inset-0 z-0">
-        {/* Generate animated particles */}
-        {[...Array(20)].map((_, i) => (
-          <div 
-            key={i}
-            className={`absolute rounded-full bg-white opacity-20 animate-pulse ${
-              animateParticles ? 'animate-float' : ''
-            }`}
-            style={{
-              width: `${Math.random() * 10 + 5}px`,
-              height: `${Math.random() * 10 + 5}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${Math.random() * 10 + 10}s`
-            }}
-          />
-        ))}
-      </div>
-      
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#120924]/30 to-[#100822] z-0"></div>
-      
       <div className="max-container relative z-10">
         {/* Title and logo section */}
         <div className="text-center mb-16">
@@ -127,16 +97,10 @@ const IntegrationsSection = () => {
         </div>
         
         <div className="relative overflow-hidden py-16">
-          {/* Enhanced orbital rings with pulsing effects */}
+          {/* Single orbital ring */}
           <div className="absolute inset-0 z-10 flex items-center justify-center">
-            <div className="h-64 w-64 rounded-full border-2 border-machineflows-light/30 animate-[spin_20s_linear_infinite] relative">
+            <div className="h-96 w-96 rounded-full border-2 border-machineflows-light/30 animate-[spin_20s_linear_infinite] relative">
               <div className="absolute h-3 w-3 bg-machineflows-light rounded-full -right-1 top-1/2 transform -translate-y-1/2 animate-pulse"></div>
-            </div>
-            <div className="h-96 w-96 rounded-full border-2 border-white/15 absolute animate-[spin_40s_linear_infinite_reverse] relative">
-              <div className="absolute h-2 w-2 bg-white rounded-full -bottom-1 left-1/2 transform -translate-x-1/2 animate-pulse"></div>
-            </div>
-            <div className="h-[32rem] w-[32rem] rounded-full border border-machineflows/15 absolute animate-[spin_60s_linear_infinite] relative">
-              <div className="absolute h-4 w-4 bg-purple-400 rounded-full -left-2 top-1/2 transform -translate-y-1/2 animate-pulse"></div>
             </div>
           </div>
           
@@ -202,27 +166,6 @@ const IntegrationsSection = () => {
               </CarouselContent>
             </Carousel>
           </div>
-        </div>
-        
-        {/* Enhanced animated connecting lines with better animation */}
-        <div className="relative z-10 h-48">
-          <svg className="absolute top-0 left-0 w-full h-full opacity-30" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-            <path className="data-flow-line stroke-machineflows-light animate-pulse" fill="none" strokeWidth="1" strokeDasharray="5,5" d="M400,200 C300,100 100,250 200,350">
-              <animate attributeName="stroke-dashoffset" from="0" to="100" dur="8s" repeatCount="indefinite" />
-            </path>
-            <path className="data-flow-line stroke-machineflows" fill="none" strokeWidth="1" strokeDasharray="5,5" d="M400,200 C500,100 700,150 600,350">
-              <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="12s" repeatCount="indefinite" />
-            </path>
-            <path className="data-flow-line stroke-white" fill="none" strokeWidth="1" strokeDasharray="3,3" d="M400,200 C300,300 500,350 300,350">
-              <animate attributeName="stroke-dashoffset" from="0" to="50" dur="15s" repeatCount="indefinite" />
-            </path>
-            <path className="data-flow-line stroke-machineflows-light" fill="none" strokeWidth="1" strokeDasharray="4,6" d="M400,200 C450,150 550,50 700,150">
-              <animate attributeName="stroke-dashoffset" from="0" to="-50" dur="10s" repeatCount="indefinite" />
-            </path>
-            <path className="data-flow-line stroke-purple-400" fill="none" strokeWidth="1" strokeDasharray="5,5" d="M400,200 C350,150 100,100 150,250">
-              <animate attributeName="stroke-dashoffset" from="0" to="70" dur="9s" repeatCount="indefinite" />
-            </path>
-          </svg>
         </div>
         
         <div className="mt-8 text-center relative z-20">
