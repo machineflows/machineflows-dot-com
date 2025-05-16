@@ -3,12 +3,9 @@ import React from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import FeatureSection from '@/components/FeatureSection';
-import ProcessSection from '@/components/ProcessSection';
-import TestimonialSection from '@/components/TestimonialSection';
-import CTASection from '@/components/CTASection';
+import PricingSection from '@/components/PricingSection';
 import Footer from '@/components/Footer';
 import IntegrationsSection from '@/components/Integrations';
-import PricingSection from '@/components/PricingSection';
 
 const Index = () => {
   return (
@@ -18,10 +15,7 @@ const Index = () => {
         <HeroSection />
         <FeatureSection />
         <IntegrationsSection />
-        <div id="pricing">
-          <PricingSection />
-        </div>
-        {/* <CTASection /> */}
+        <PricingSection />
       </main>
       <Footer />
     </div>
