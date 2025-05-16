@@ -8,7 +8,7 @@ const Logo = () => {
         <img
           src="/lovable-uploads/bb4884cb-0c54-4f73-a4d0-b0e52dd2d1b1.png"
           alt="Machineflows Logo"
-          className="h-8 md:h-10"
+          className="h-10 md:h-12"
         />
       </div>
     </a>
