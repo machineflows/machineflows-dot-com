@@ -6,6 +6,7 @@ import FeatureSection from '@/components/FeatureSection';
 import PricingSection from '@/components/PricingSection';
 import Footer from '@/components/Footer';
 import IntegrationsSection from '@/components/Integrations';
+import CTASection from '@/components/CTASection';
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
         <FeatureSection />
         <IntegrationsSection />
         <PricingSection />
+        <CTASection />
       </main>
       <Footer />
     </div>

@@ -38,8 +38,8 @@ const PricingSection = () => {
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     console.log(values);
-    // In a real application, this would send the form data to your backend
-    window.open('https://cal.com/danielcoronado/25min?user=danielcoronado', '_blank');
+    // Redirect to Cal.com scheduling page
+    window.open('https://cal.com/danielcoronado/25min', '_blank');
   };
 
   return (

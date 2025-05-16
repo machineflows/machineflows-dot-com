@@ -27,6 +27,10 @@ const Header = () => {
     };
   }, []);
 
+  const handleBookDemo = () => {
+    window.open('https://cal.com/danielcoronado/25min', '_blank');
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
@@ -53,7 +57,12 @@ const Header = () => {
         </nav>
 
         <div className="hidden md:flex items-center">
-          <Button className="bg-white text-[#1a0d35] hover:bg-gray-100 text-lg px-6 py-2">Book a demo</Button>
+          <Button 
+            className="bg-white text-[#1a0d35] hover:bg-gray-100 text-lg px-6 py-2"
+            onClick={handleBookDemo}
+          >
+            Book a demo
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -92,7 +101,15 @@ const Header = () => {
               Contact
             </a>
             <div className="mt-4">
-              <Button className="w-full bg-white text-[#1a0d35] hover:bg-gray-100 text-lg">Book a demo</Button>
+              <Button 
+                className="w-full bg-white text-[#1a0d35] hover:bg-gray-100 text-lg"
+                onClick={() => {
+                  window.open('https://cal.com/danielcoronado/25min', '_blank');
+                  setMobileMenuOpen(false);
+                }}
+              >
+                Book a demo
+              </Button>
             </div>
           </div>
         </div>

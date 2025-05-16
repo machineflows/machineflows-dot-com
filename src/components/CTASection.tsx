@@ -3,6 +3,10 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 
 const CTASection = () => {
+  const handleBookDemo = () => {
+    window.open('https://cal.com/danielcoronado/25min', '_blank');
+  };
+
   return (
     <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
       <div className="container max-w-7xl mx-auto px-4 text-center">
@@ -11,10 +15,20 @@ const CTASection = () => {
           Join hundreds of companies that have accelerated their manufacturing with Machineflows AI-powered platform.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 text-base px-8">
+          <Button 
+            size="lg" 
+            variant="secondary" 
+            className="bg-white text-primary hover:bg-gray-100 text-base px-8"
+            onClick={handleBookDemo}
+          >
             Get Started
           </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-base px-8">
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="border-white text-white hover:bg-white/10 text-base px-8"
+            onClick={handleBookDemo}
+          >
             Book a Demo
           </Button>
         </div>
