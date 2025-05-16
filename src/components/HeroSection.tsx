@@ -5,15 +5,15 @@ import HeroImage from './HeroImage';
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-24 pb-20 md:pt-28 md:pb-32 overflow-hidden bg-[#1a0d35]">
+    <section className="relative pt-28 pb-32 md:pt-36 md:pb-40 overflow-hidden bg-[#1a0d35]">
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
               From RFQs to manufacturing parts. <span className="text-secondary">Fast.</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
+            <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-lg">
               Machineflows is a secure AI-native for your manufacturers, built with ISO 9001 compliance.
             </p>
             
