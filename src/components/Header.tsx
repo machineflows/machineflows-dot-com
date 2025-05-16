@@ -6,9 +6,33 @@ import Logo from './Logo';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Add scroll event listener to detect when page is scrolled
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    // Add event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Clean up
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 bg-[#1a0d35] shadow-md py-6">
+    <header 
+      className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? 'bg-[#1a0d35] shadow-lg py-4' : 'bg-[#1a0d35] shadow-md py-6'
+      }`}
+    >
       <div className="container max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo with increased size */}
         <div className="scale-120">
