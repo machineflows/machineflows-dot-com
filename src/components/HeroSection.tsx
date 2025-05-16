@@ -42,8 +42,8 @@ const HeroSection = () => {
       </div>
 
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="animate-fade-in">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 lg:gap-24 items-start">
+          <div className="animate-fade-in pt-4 md:pt-8">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
               From RFQs to manufacturing parts. <span className="text-secondary">Fast.</span>
             </h1>
@@ -62,7 +62,7 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="relative animate-fade-in">
+          <div className="relative animate-fade-in mt-8 md:mt-16">
             <HeroImage />
           </div>
         </div>
