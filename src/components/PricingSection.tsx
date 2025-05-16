@@ -154,10 +154,10 @@ const PricingSection = () => {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-700 font-medium">Tell us anything about your shop</FormLabel>
+                      <FormLabel className="text-gray-700 font-medium">Tell us more about your shop</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="..."
+                          placeholder=""
                           {...field}
                           className="bg-gray-50 text-gray-900 border border-gray-200 rounded-lg min-h-[120px] px-4 py-3 focus-visible:ring-secondary resize-none"
                         />
