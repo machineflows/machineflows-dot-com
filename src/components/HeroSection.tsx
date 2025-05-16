@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import HeroImage from './HeroImage';
 
 const HeroSection = () => {
   return (
@@ -41,22 +42,28 @@ const HeroSection = () => {
       </div>
 
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
-        <div className="flex flex-col items-center justify-center text-center py-16 md:py-24">
-          <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-white mb-10 leading-tight max-w-5xl">
-            From RFQs to manufacturing parts. <span className="text-secondary">Fast.</span>
-          </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="animate-fade-in">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
+              From RFQs to manufacturing parts. <span className="text-secondary">Fast.</span>
+            </h1>
+            
+            <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-lg">
+              Machineflows is a secure AI-native for your manufacturers, built with ISO 9001 compliance.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="text-base px-8 bg-white text-[#1a0d35] hover:bg-gray-100">
+                Get Started
+              </Button>
+              <Button size="lg" variant="outline" className="text-base px-8 text-white border-white hover:bg-white/10">
+                Book a Demo
+              </Button>
+            </div>
+          </div>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl">
-            Machineflows is a secure AI-native for your manufacturers, built with ISO 9001 compliance.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="text-base px-8 bg-white text-[#1a0d35] hover:bg-gray-100">
-              Get Started
-            </Button>
-            <Button size="lg" variant="outline" className="text-base px-8 text-white border-white hover:bg-white/10">
-              Book a Demo
-            </Button>
+          <div className="relative animate-fade-in">
+            <HeroImage />
           </div>
         </div>
       </div>
