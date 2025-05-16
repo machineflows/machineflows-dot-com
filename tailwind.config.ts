@@ -93,42 +93,27 @@ export default {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' }
 				},
-				// Orbital animations for each speed value - adjusted for smaller orbits
-				'orbit-20': {
-					'0%': { transform: 'rotate(0deg) translateX(30px)' },
-					'100%': { transform: 'rotate(360deg) translateX(30px)' }
+				// Doppler effect orbital animations - planets move faster on one side and slower on the other
+				'doppler-inner': {
+					'0%': { transform: 'rotate(0deg)' },
+					'25%': { transform: 'rotate(120deg)' }, // Faster in first quarter
+					'50%': { transform: 'rotate(180deg)' },
+					'75%': { transform: 'rotate(240deg)' }, // Slower in third quarter
+					'100%': { transform: 'rotate(360deg)' }
 				},
-				'orbit-25': {
-					'0%': { transform: 'rotate(0deg) translateX(30px)' },
-					'100%': { transform: 'rotate(360deg) translateX(30px)' }
+				'doppler-middle': {
+					'0%': { transform: 'rotate(0deg)' },
+					'25%': { transform: 'rotate(100deg)' }, // Faster in first quarter
+					'50%': { transform: 'rotate(180deg)' },
+					'75%': { transform: 'rotate(260deg)' }, // Slower in third quarter
+					'100%': { transform: 'rotate(360deg)' }
 				},
-				'orbit-28': {
-					'0%': { transform: 'rotate(0deg) translateX(50px)' },
-					'100%': { transform: 'rotate(360deg) translateX(50px)' }
-				},
-				'orbit-30': {
-					'0%': { transform: 'rotate(0deg) translateX(30px)' },
-					'100%': { transform: 'rotate(360deg) translateX(30px)' }
-				},
-				'orbit-35': {
-					'0%': { transform: 'rotate(0deg) translateX(50px)' },
-					'100%': { transform: 'rotate(360deg) translateX(50px)' }
-				},
-				'orbit-38': {
-					'0%': { transform: 'rotate(0deg) translateX(70px)' },
-					'100%': { transform: 'rotate(360deg) translateX(70px)' }
-				},
-				'orbit-40': {
-					'0%': { transform: 'rotate(0deg) translateX(50px)' },
-					'100%': { transform: 'rotate(360deg) translateX(50px)' }
-				},
-				'orbit-45': {
-					'0%': { transform: 'rotate(0deg) translateX(70px)' },
-					'100%': { transform: 'rotate(360deg) translateX(70px)' }
-				},
-				'orbit-50': {
-					'0%': { transform: 'rotate(0deg) translateX(70px)' },
-					'100%': { transform: 'rotate(360deg) translateX(70px)' }
+				'doppler-outer': {
+					'0%': { transform: 'rotate(0deg)' },
+					'25%': { transform: 'rotate(110deg)' }, // Faster in first quarter
+					'50%': { transform: 'rotate(180deg)' },
+					'75%': { transform: 'rotate(250deg)' }, // Slower in third quarter
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -138,7 +123,10 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'spin-slow': 'spin-slow 20s linear infinite',
 				'spin-medium': 'spin-medium 15s linear infinite',
-				'spin-fast': 'spin-fast 10s linear infinite'
+				'spin-fast': 'spin-fast 10s linear infinite',
+				'doppler-inner': 'doppler-inner 18s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite',
+				'doppler-middle': 'doppler-middle 25s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite',
+				'doppler-outer': 'doppler-outer 32s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite'
 			}
 		}
 	},
