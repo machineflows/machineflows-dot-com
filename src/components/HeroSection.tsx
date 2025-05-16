@@ -41,15 +41,17 @@ const HeroSection = () => {
         </svg>
       </div>
 
-      <div className="container max-w-7xl mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="container max-w-8xl mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-40 items-center">
           <div className="animate-fade-in">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
               From RFQs to manufacturing parts. <span className="text-secondary">Fast.</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-lg">
-              Machineflows is a secure AI-native for your manufacturers, built with ISO 9001 compliance.
+            <p className="text-lg md:text-3xl text-gray-300 mb-10 max-w-lg">
+              Secure AI-native platform for manufacturers to track their workflows.
+              <br />
+              Built with ISO 9001 compliance.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
