@@ -9,13 +9,10 @@ const HeroSection = () => {
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
-            <div className="mb-6">
-              <img
-                src="/lovable-uploads/0ea33c6e-7f49-4bf0-b3b0-247b4e678647.png"
-                alt="Machineflows with tagline"
-                className="max-w-full h-auto"
-              />
-            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              From RFQs to manufacturing parts. <span className="text-secondary">Fast.</span>
+            </h1>
+            
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
               Machineflows is a secure AI-native for your manufacturers, built with ISO 9001 compliance.
             </p>
