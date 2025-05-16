@@ -41,11 +41,11 @@ const FeatureSection = () => {
     <section id="features" className="py-20 bg-white">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            All the tools you need to run your machine shop
+          <h2 className="text-5xl md:text-5xl font-bold mb-4 text-[#1a0d35]">
+            Quote faster. Track jobs with precision.
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Machineflows helps you streamline operations, reduce costs, and boost productivity.
+          <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+          Machineflows helps you respond to RFQs instantly and stay on top of every part in production.
           </p>
         </div>
         
