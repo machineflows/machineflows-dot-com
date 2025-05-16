@@ -25,18 +25,6 @@ const HeroSection = () => {
                 Book a Demo
               </Button>
             </div>
-            
-            <div className="mt-10 flex items-center space-x-6">
-              <div className="flex -space-x-2">
-                <div className="w-10 h-10 rounded-full bg-blue-400 border-2 border-[#1a0d35]"></div>
-                <div className="w-10 h-10 rounded-full bg-green-400 border-2 border-[#1a0d35]"></div>
-                <div className="w-10 h-10 rounded-full bg-yellow-400 border-2 border-[#1a0d35]"></div>
-                <div className="w-10 h-10 rounded-full bg-red-400 border-2 border-[#1a0d35]"></div>
-              </div>
-              <p className="text-sm text-gray-300">
-                <span className="font-semibold">500+</span> manufacturers trust us
-              </p>
-            </div>
           </div>
           
           <div className="relative animate-fade-in">
