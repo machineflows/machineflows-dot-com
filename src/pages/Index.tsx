@@ -7,6 +7,7 @@ import ProcessSection from '@/components/ProcessSection';
 import TestimonialSection from '@/components/TestimonialSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
+import IntegrationsSection from '@/components/Integrations';
 
 const Index = () => {
   return (
@@ -15,8 +16,7 @@ const Index = () => {
       <main className="pt-28">
         <HeroSection />
         <FeatureSection />
-        <ProcessSection />
-        <TestimonialSection />
+        <IntegrationsSection />
         <CTASection />
       </main>
       <Footer />
