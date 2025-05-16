@@ -81,42 +81,42 @@ export default {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' }
 				},
-				// Orbital animations for each speed value
+				// Orbital animations for each speed value - adjusted for smaller orbits
 				'orbit-20': {
-					'0%': { transform: 'rotate(0deg) translateX(80px)' },
-					'100%': { transform: 'rotate(360deg) translateX(80px)' }
+					'0%': { transform: 'rotate(0deg) translateX(30px)' },
+					'100%': { transform: 'rotate(360deg) translateX(30px)' }
 				},
 				'orbit-25': {
-					'0%': { transform: 'rotate(0deg) translateX(80px)' },
-					'100%': { transform: 'rotate(360deg) translateX(80px)' }
+					'0%': { transform: 'rotate(0deg) translateX(30px)' },
+					'100%': { transform: 'rotate(360deg) translateX(30px)' }
 				},
 				'orbit-28': {
-					'0%': { transform: 'rotate(0deg) translateX(110px)' },
-					'100%': { transform: 'rotate(360deg) translateX(110px)' }
+					'0%': { transform: 'rotate(0deg) translateX(50px)' },
+					'100%': { transform: 'rotate(360deg) translateX(50px)' }
 				},
 				'orbit-30': {
-					'0%': { transform: 'rotate(0deg) translateX(80px)' },
-					'100%': { transform: 'rotate(360deg) translateX(80px)' }
+					'0%': { transform: 'rotate(0deg) translateX(30px)' },
+					'100%': { transform: 'rotate(360deg) translateX(30px)' }
 				},
 				'orbit-35': {
-					'0%': { transform: 'rotate(0deg) translateX(110px)' },
-					'100%': { transform: 'rotate(360deg) translateX(110px)' }
+					'0%': { transform: 'rotate(0deg) translateX(50px)' },
+					'100%': { transform: 'rotate(360deg) translateX(50px)' }
 				},
 				'orbit-38': {
-					'0%': { transform: 'rotate(0deg) translateX(140px)' },
-					'100%': { transform: 'rotate(360deg) translateX(140px)' }
+					'0%': { transform: 'rotate(0deg) translateX(70px)' },
+					'100%': { transform: 'rotate(360deg) translateX(70px)' }
 				},
 				'orbit-40': {
-					'0%': { transform: 'rotate(0deg) translateX(110px)' },
-					'100%': { transform: 'rotate(360deg) translateX(110px)' }
+					'0%': { transform: 'rotate(0deg) translateX(50px)' },
+					'100%': { transform: 'rotate(360deg) translateX(50px)' }
 				},
 				'orbit-45': {
-					'0%': { transform: 'rotate(0deg) translateX(140px)' },
-					'100%': { transform: 'rotate(360deg) translateX(140px)' }
+					'0%': { transform: 'rotate(0deg) translateX(70px)' },
+					'100%': { transform: 'rotate(360deg) translateX(70px)' }
 				},
 				'orbit-50': {
-					'0%': { transform: 'rotate(0deg) translateX(140px)' },
-					'100%': { transform: 'rotate(360deg) translateX(140px)' }
+					'0%': { transform: 'rotate(0deg) translateX(70px)' },
+					'100%': { transform: 'rotate(360deg) translateX(70px)' }
 				}
 			},
 			animation: {

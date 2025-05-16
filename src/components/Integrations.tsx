@@ -45,19 +45,19 @@ const integrations = [
   }
 ];
 
-// Planets to orbit around the Machineflows logo
+// Planets to orbit around the highlighted integration
 const orbitalPlanets = [
-  { size: 6, color: "bg-blue-400", orbitSize: 160, speed: 20, delay: 0, startPosition: 0 },
-  { size: 8, color: "bg-machineflows-light", orbitSize: 160, speed: 25, delay: 3, startPosition: 120 },
-  { size: 5, color: "bg-purple-300", orbitSize: 160, speed: 30, delay: 1, startPosition: 240 },
+  { size: 4, color: "bg-blue-400", orbitSize: 60, speed: 20, delay: 0, startPosition: 0 },
+  { size: 6, color: "bg-machineflows-light", orbitSize: 60, speed: 25, delay: 3, startPosition: 120 },
+  { size: 3, color: "bg-purple-300", orbitSize: 60, speed: 30, delay: 1, startPosition: 240 },
   
-  { size: 4, color: "bg-indigo-300", orbitSize: 220, speed: 35, delay: 2, startPosition: 45 },
-  { size: 7, color: "bg-violet-400", orbitSize: 220, speed: 40, delay: 0, startPosition: 165 },
-  { size: 5, color: "bg-blue-300", orbitSize: 220, speed: 28, delay: 1.5, startPosition: 285 },
+  { size: 3, color: "bg-indigo-300", orbitSize: 100, speed: 35, delay: 2, startPosition: 45 },
+  { size: 5, color: "bg-violet-400", orbitSize: 100, speed: 40, delay: 0, startPosition: 165 },
+  { size: 4, color: "bg-blue-300", orbitSize: 100, speed: 28, delay: 1.5, startPosition: 285 },
   
-  { size: 6, color: "bg-pink-300", orbitSize: 280, speed: 45, delay: 1, startPosition: 90 },
-  { size: 4, color: "bg-indigo-400", orbitSize: 280, speed: 50, delay: 2.5, startPosition: 210 },
-  { size: 7, color: "bg-purple-400", orbitSize: 280, speed: 38, delay: 0.5, startPosition: 330 }
+  { size: 5, color: "bg-pink-300", orbitSize: 140, speed: 45, delay: 1, startPosition: 90 },
+  { size: 3, color: "bg-indigo-400", orbitSize: 140, speed: 50, delay: 2.5, startPosition: 210 },
+  { size: 5, color: "bg-purple-400", orbitSize: 140, speed: 38, delay: 0.5, startPosition: 330 }
 ];
 
 const IntegrationsSection = () => {
@@ -112,66 +112,6 @@ const IntegrationsSection = () => {
         </div>
         
         <div className="relative overflow-hidden py-16">
-          {/* Three orbital rings with planetary bodies */}
-          <div className="absolute inset-0 z-10 flex items-center justify-center">
-            {/* First (inner) orbital ring */}
-            <div className="h-80 w-80 rounded-full border border-machineflows-light/30 animate-[spin_30s_linear_infinite] relative">
-              {orbitalPlanets
-                .filter(planet => planet.orbitSize === 160)
-                .map((planet, index) => (
-                  <div 
-                    key={`inner-${index}`}
-                    className={`absolute ${planet.color} rounded-full z-20 opacity-80`}
-                    style={{
-                      height: `${planet.size}px`,
-                      width: `${planet.size}px`,
-                      transform: `rotate(${planet.startPosition}deg) translateX(${planet.orbitSize / 2}px)`,
-                      animation: `orbit-${planet.speed} ${planet.speed}s linear infinite ${planet.delay}s`
-                    }}
-                  />
-                ))
-              }
-            </div>
-            
-            {/* Second (middle) orbital ring */}
-            <div className="h-[30rem] w-[30rem] rounded-full border border-purple-400/30 animate-[spin_40s_linear_infinite_reverse] relative">
-              {orbitalPlanets
-                .filter(planet => planet.orbitSize === 220)
-                .map((planet, index) => (
-                  <div 
-                    key={`middle-${index}`}
-                    className={`absolute ${planet.color} rounded-full z-20 opacity-80`}
-                    style={{
-                      height: `${planet.size}px`,
-                      width: `${planet.size}px`,
-                      transform: `rotate(${planet.startPosition}deg) translateX(${planet.orbitSize / 2}px)`,
-                      animation: `orbit-${planet.speed} ${planet.speed}s linear infinite ${planet.delay}s`
-                    }}
-                  />
-                ))
-              }
-            </div>
-            
-            {/* Third (outer) orbital ring */}
-            <div className="h-[40rem] w-[40rem] rounded-full border border-blue-400/30 animate-[spin_50s_linear_infinite] relative">
-              {orbitalPlanets
-                .filter(planet => planet.orbitSize === 280)
-                .map((planet, index) => (
-                  <div 
-                    key={`outer-${index}`}
-                    className={`absolute ${planet.color} rounded-full z-20 opacity-80`}
-                    style={{
-                      height: `${planet.size}px`,
-                      width: `${planet.size}px`,
-                      transform: `rotate(${planet.startPosition}deg) translateX(${planet.orbitSize / 2}px)`,
-                      animation: `orbit-${planet.speed} ${planet.speed}s linear infinite ${planet.delay}s`
-                    }}
-                  />
-                ))
-              }
-            </div>
-          </div>
-          
           {/* Fixed height container with plenty of vertical space */}
           <div className="relative z-20 mx-auto max-w-6xl min-h-[400px] flex items-center">
             <Carousel
@@ -195,12 +135,74 @@ const IntegrationsSection = () => {
                         i === activeSlide 
                           ? 'scale-125 opacity-100 z-10' 
                           : 'scale-75 opacity-50'
-                      } transition-all duration-500`}
+                      } transition-all duration-500 relative`}
                     >
+                      {/* Orbital system around active slide */}
+                      {i === activeSlide && (
+                        <>
+                          {/* First (inner) orbital ring */}
+                          <div className="absolute h-24 w-24 rounded-full border border-machineflows-light/30 animate-[spin_15s_linear_infinite]">
+                            {orbitalPlanets
+                              .filter(planet => planet.orbitSize === 60)
+                              .map((planet, index) => (
+                                <div 
+                                  key={`inner-${index}`}
+                                  className={`absolute ${planet.color} rounded-full z-20 opacity-80`}
+                                  style={{
+                                    height: `${planet.size}px`,
+                                    width: `${planet.size}px`,
+                                    transform: `rotate(${planet.startPosition}deg) translateX(${planet.orbitSize / 2}px)`,
+                                    animation: `orbit-${planet.speed} ${planet.speed}s linear infinite ${planet.delay}s`
+                                  }}
+                                />
+                              ))
+                            }
+                          </div>
+                          
+                          {/* Second (middle) orbital ring */}
+                          <div className="absolute h-40 w-40 rounded-full border border-purple-400/30 animate-[spin_20s_linear_infinite_reverse]">
+                            {orbitalPlanets
+                              .filter(planet => planet.orbitSize === 100)
+                              .map((planet, index) => (
+                                <div 
+                                  key={`middle-${index}`}
+                                  className={`absolute ${planet.color} rounded-full z-20 opacity-80`}
+                                  style={{
+                                    height: `${planet.size}px`,
+                                    width: `${planet.size}px`,
+                                    transform: `rotate(${planet.startPosition}deg) translateX(${planet.orbitSize / 2}px)`,
+                                    animation: `orbit-${planet.speed} ${planet.speed}s linear infinite ${planet.delay}s`
+                                  }}
+                                />
+                              ))
+                            }
+                          </div>
+                          
+                          {/* Third (outer) orbital ring */}
+                          <div className="absolute h-56 w-56 rounded-full border border-blue-400/30 animate-[spin_25s_linear_infinite]">
+                            {orbitalPlanets
+                              .filter(planet => planet.orbitSize === 140)
+                              .map((planet, index) => (
+                                <div 
+                                  key={`outer-${index}`}
+                                  className={`absolute ${planet.color} rounded-full z-20 opacity-80`}
+                                  style={{
+                                    height: `${planet.size}px`,
+                                    width: `${planet.size}px`,
+                                    transform: `rotate(${planet.startPosition}deg) translateX(${planet.orbitSize / 2}px)`,
+                                    animation: `orbit-${planet.speed} ${planet.speed}s linear infinite ${planet.delay}s`
+                                  }}
+                                />
+                              ))
+                            }
+                          </div>
+                        </>
+                      )}
+                      
                       <div 
                         className={`bg-white shadow-lg rounded-xl flex items-center justify-center transition-all duration-500 ${
                           i === activeSlide 
-                            ? 'h-28 w-28 shadow-xl shadow-purple-500/30' 
+                            ? 'h-28 w-28 shadow-xl shadow-purple-500/30 z-30 relative' 
                             : 'h-20 w-20'
                         }`}
                       >
