@@ -74,7 +74,7 @@ const IntegrationsSection = () => {
             <div className="relative">
               <div className="h-24 w-24 bg-[#050419] rounded-full shadow-lg flex items-center justify-center relative z-30 border-4 border-white/20 mb-6">
                 <img 
-                  src="/lovable-uploads/a6ee0ac3-d1b3-40d9-a173-cae4f70a3e1b.png" 
+                  src="/lovable-uploads/8bc4e5f8-53b2-468e-89e6-4a2027842209.png" 
                   alt="Machineflows" 
                   className="h-20 w-20 object-cover rounded-full"
                 />
