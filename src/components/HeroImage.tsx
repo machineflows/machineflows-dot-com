@@ -7,7 +7,9 @@ import { Database, Activity, Calendar } from 'lucide-react';
 const HeroImage = () => {
   return (
     <div className="relative">
-      <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-25"></div>
+      {/* Glow effect */}
+      <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-25 animate-pulse"></div>
+      
       <div className="relative bg-white/5 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden animate-float scale-110">
         <div className="flex flex-col md:flex-row gap-6 p-6">
           {/* Left inventory card */}
@@ -28,7 +30,7 @@ const HeroImage = () => {
                     <span className="font-medium">87%</span>
                   </div>
                   <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
-                    <div className="h-full bg-green-500 rounded-full" style={{width: '87%'}}></div>
+                    <div className="h-full bg-green-500 rounded-full animate-pulse" style={{width: '87%', animationDuration: '4s'}}></div>
                   </div>
                 </div>
                 
@@ -38,7 +40,7 @@ const HeroImage = () => {
                     <span className="font-medium">62%</span>
                   </div>
                   <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
-                    <div className="h-full bg-yellow-500 rounded-full" style={{width: '62%'}}></div>
+                    <div className="h-full bg-yellow-500 rounded-full animate-pulse" style={{width: '62%', animationDuration: '5s'}}></div>
                   </div>
                 </div>
               </div>
@@ -56,7 +58,7 @@ const HeroImage = () => {
               </div>
               <p className="text-xs text-gray-500 mb-4">Real-time insights into your manufacturing process</p>
               
-              {/* Chart representation - closer to the image design */}
+              {/* Chart representation - with animation */}
               <div className="h-32 bg-blue-50 rounded-md mb-6 relative overflow-hidden">
                 <svg viewBox="0 0 100 30" className="w-full h-full">
                   <path
@@ -71,7 +73,18 @@ const HeroImage = () => {
                     stroke="#93c5fd"
                     strokeWidth="1.5"
                     strokeDasharray="2"
-                  />
+                  >
+                    <animate
+                      attributeName="d"
+                      dur="8s"
+                      repeatCount="indefinite"
+                      values="
+                        M0,15 Q10,10 20,5 T40,20 T60,10 T80,15 T100,5;
+                        M0,15 Q10,15 20,10 T40,15 T60,20 T80,10 T100,15;
+                        M0,15 Q10,5 20,15 T40,10 T60,15 T80,5 T100,10;
+                        M0,15 Q10,10 20,5 T40,20 T60,10 T80,15 T100,5"
+                    />
+                  </path>
                 </svg>
               </div>
               
@@ -98,7 +111,7 @@ const HeroImage = () => {
               
               <div className="mt-3">
                 <div className="h-2.5 w-full bg-blue-100 rounded-full overflow-hidden">
-                  <div className="h-full bg-blue-500 rounded-full" style={{width: '75%'}}></div>
+                  <div className="h-full bg-blue-500 rounded-full animate-pulse" style={{width: '75%', animationDuration: '3s'}}></div>
                 </div>
                 <div className="text-center mt-2">
                   <span className="text-sm font-medium">75%</span>
@@ -109,9 +122,9 @@ const HeroImage = () => {
         </div>
       </div>
       
-      {/* Decorative elements */}
-      <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-indigo-500/10 rounded-full blur-xl"></div>
-      <div className="absolute -left-8 -top-8 w-32 h-32 bg-purple-500/10 rounded-full blur-xl"></div>
+      {/* Decorative elements with animation */}
+      <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-indigo-500/10 rounded-full blur-xl animate-pulse" style={{ animationDuration: '4s' }}></div>
+      <div className="absolute -left-8 -top-8 w-32 h-32 bg-purple-500/10 rounded-full blur-xl animate-pulse" style={{ animationDuration: '6s' }}></div>
     </div>
   );
 };
