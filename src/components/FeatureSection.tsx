@@ -1,29 +1,34 @@
 
 import React from 'react';
-import { Activity, Database, Clock, BarChart2 } from 'lucide-react';
+import { Activity, Database, Clock, BarChart2, DollarSign, Shield } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const features = [
   {
     title: "Real-time Analytics",
-    description: "Get instant insights into your production performance and operational metrics to make data-driven decisions.",
+    description: "Query in natural language to get instant insights into your production performance and make faster decisions.",
     icon: Activity
   },
   {
-    title: "Inventory Management",
+    title: "Quote In Seconds",
+    description: "Get instant quotes for your parts with our AI-powered quoting engine.",
+    icon: DollarSign
+  },
+  {
+    title: "Stay Compliant 24/7",
+    description: "Built with ISO 9001 compliance, so you can focus on what matters most.",
+    icon: Shield
+  },
+  {
+    title: "Inventory Management  ",
     description: "Track raw materials, components, and finished goods with precision to optimize stock levels and reduce waste.",
     icon: Database
   },
-  {
-    title: "Production Planning",
-    description: "Create detailed production schedules and manage workflows with AI-powered optimization.",
-    icon: BarChart2
-  },
-  {
-    title: "Equipment Monitoring",
-    description: "Monitor machine performance, predict maintenance needs, and prevent costly downtime.",
-    icon: BarChart2
-  },
+  // {
+  //   title: "Production Planning",
+  //   description: "Create detailed production schedules and manage workflows with AI-powered optimization.",
+  //   icon: BarChart2
+  // },
   {
     title: "Time Tracking",
     description: "Capture accurate labor hours and productivity metrics for better resource allocation.",
