@@ -5,60 +5,33 @@ import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
-      }`}
-    >
+    <header className="sticky top-0 left-0 right-0 z-50 bg-[#1a0d35] shadow-md py-4">
       <div className="container max-w-7xl mx-auto px-4 flex items-center justify-between">
         <Logo />
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#features" className="font-medium text-gray-700 hover:text-primary transition-colors">
-            Features
-          </a>
-          <a href="#solutions" className="font-medium text-gray-700 hover:text-primary transition-colors">
+          <a href="#solutions" className="font-medium text-white hover:text-gray-300 transition-colors">
             Solutions
           </a>
-          <a href="#pricing" className="font-medium text-gray-700 hover:text-primary transition-colors">
+          <a href="#pricing" className="font-medium text-white hover:text-gray-300 transition-colors">
             Pricing
           </a>
-          <a href="#about" className="font-medium text-gray-700 hover:text-primary transition-colors">
-            About
-          </a>
-          <a href="#contact" className="font-medium text-gray-700 hover:text-primary transition-colors">
+          <a href="#contact" className="font-medium text-white hover:text-gray-300 transition-colors">
             Contact
           </a>
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
-          <Button variant="outline">Log in</Button>
-          <Button>Get Started</Button>
+        <div className="hidden md:flex items-center">
+          <Button className="bg-white text-[#1a0d35] hover:bg-gray-100">Book a demo</Button>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden"
+          className="md:hidden text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -68,46 +41,31 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white absolute top-full left-0 right-0 shadow-lg">
+        <div className="md:hidden bg-[#1a0d35] absolute top-full left-0 right-0 shadow-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             <a 
-              href="#features" 
-              className="block py-2 text-gray-700 hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Features
-            </a>
-            <a 
               href="#solutions" 
-              className="block py-2 text-gray-700 hover:text-primary transition-colors"
+              className="block py-2 text-white hover:text-gray-300 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Solutions
             </a>
             <a 
               href="#pricing" 
-              className="block py-2 text-gray-700 hover:text-primary transition-colors"
+              className="block py-2 text-white hover:text-gray-300 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Pricing
             </a>
             <a 
-              href="#about" 
-              className="block py-2 text-gray-700 hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About
-            </a>
-            <a 
               href="#contact" 
-              className="block py-2 text-gray-700 hover:text-primary transition-colors"
+              className="block py-2 text-white hover:text-gray-300 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
             </a>
-            <div className="flex flex-col gap-3 mt-4">
-              <Button variant="outline" className="w-full">Log in</Button>
-              <Button className="w-full">Get Started</Button>
+            <div className="mt-4">
+              <Button className="w-full bg-white text-[#1a0d35] hover:bg-gray-100">Book a demo</Button>
             </div>
           </div>
         </div>

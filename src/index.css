@@ -5,8 +5,8 @@
 
 @layer base {
   :root {
-    --background: 220 33% 98%;
-    --foreground: 222 47% 11%;
+    --background: 260 60% 13%;
+    --foreground: 210 40% 98%;
 
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
@@ -14,16 +14,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 212 100% 47%;
+    --primary: 260 60% 13%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 195 83% 38%;
+    --secondary: 262 83% 58%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 195 83% 38%;
+    --accent: 262 83% 58%;
     --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84.2% 60.2%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 212 100% 47%;
+    --ring: 262 83% 58%;
 
     --radius: 0.5rem;
   }
@@ -47,19 +47,19 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent;
   }
   
   .hero-pattern {
-    background-color: rgba(255, 255, 255, 0.8);
-    background-image: radial-gradient(hsla(var(--muted)/0.6) 1px, transparent 1px);
+    background-color: hsl(var(--background));
+    background-image: radial-gradient(hsla(var(--accent)/0.15) 1px, transparent 1px);
     background-size: 30px 30px;
   }
   
   .gradient-border {
     position: relative;
     border-radius: var(--radius);
-    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary)));
+    background: linear-gradient(to right, hsl(var(--secondary)), hsl(var(--accent)));
     padding: 1px;
   }
   
@@ -93,3 +93,4 @@
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
   }
 }
+
